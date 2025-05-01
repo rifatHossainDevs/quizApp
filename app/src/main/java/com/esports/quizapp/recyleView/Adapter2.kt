@@ -6,11 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.esports.quizapp.Data.Category
 import com.esports.quizapp.databinding.ItemLayoutBinding
 
-class Adapter2 (val category: List<Category> , private var handleUserClick: HandleUserClick ,): RecyclerView.Adapter<Adapter2.ViewHolder>(){
+class Adapter2 (val category: List<Category> , private var handleUserClick: HandleUserClick ): RecyclerView.Adapter<Adapter2.ViewHolder>(){
     class ViewHolder(val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root)
 
     interface HandleUserClick{
-        fun selectQuiz(category: String)
+        fun selectQuiz(categoryType: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

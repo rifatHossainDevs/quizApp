@@ -133,9 +133,9 @@ class CategoryActivity : AppCompatActivity(), Adapter2.HandleUserClick {
         }*/
     }
 
-    override fun selectQuiz(category: String) {
+    override fun selectQuiz(categoryType: String) {
         val intent = Intent(this@CategoryActivity, QuizActivity::class.java)
-        intent.putExtra("name", category)
+        intent.putExtra("name", categoryType)
         startActivity(intent)
     }
 }
